@@ -13,7 +13,7 @@ async function initWorkout(){
       ...tallyExercises(lastWorkout.exercises)
     };
 
-    renderWorkoutSummar(workoutSummary);
+    renderWorkoutSummary(workoutSummary);
   } else {
     renderNoWorkOutText()
   }
