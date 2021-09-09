@@ -42,13 +42,13 @@ function populateChart(data) {
           backgroundColor: 'red',
           borderColor: 'red',
           data: durations,
-          fill: false
+          fill: false,
         },
       ],
     },
     options: {
       responsive: true,
-      title: { 
+      title: {
         display: true,
         text: 'Time Spent Working Out (Last 7 days)',
       },
@@ -59,7 +59,7 @@ function populateChart(data) {
       },
     },
   });
-  
+
   let barChart = new Chart(bar, {
     type: 'bar',
     data: {
@@ -69,8 +69,8 @@ function populateChart(data) {
           label: 'Pounds',
           data: pounds,
           backgroundColor: [
-            'rgba(255, 99, 132, 0.2',
-            'rgba(54, 162, 235, 0.2',
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
             'rgba(255, 206, 86, 0.2)',
             'rgba(75, 192, 192, 0.2)',
             'rgba(153, 102, 255, 0.2)',
@@ -84,7 +84,7 @@ function populateChart(data) {
             'rgba(153, 102, 255, 1)',
             'rgba(255, 159, 64, 1)',
           ],
-          borderWidth: 1  
+          borderWidth: 1,
         },
       ],
     },
@@ -103,7 +103,7 @@ function populateChart(data) {
         ],
       },
     },
-  }),
+  });
 }
 
 API.getWorkoutsInRange().then(populateChart);
